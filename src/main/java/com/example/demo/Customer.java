@@ -14,23 +14,31 @@ import javax.persistence.*;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="customerid")
+    @Column(name = "customerid")
     private long id;
-    @Column(name="title")
-    private String  title;
-    @Column(name="firstname")
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "firstname")
     private String firstName;
-    @Column(name="lastname")
+
+    @Column(name = "lastname")
     private String lastName;
-    @Column(name="streetaddress")
+
+    @Column(name = "streetaddress")
     private String streetAddress;
-    @Column(name="city")
+
+    @Column(name = "city")
     private String city;
-    @Column(name="state")
+
+    @Column(name = "state")
     private String state;
-    @Column(name="zipcode")
+
+    @Column(name = "zipcode")
     private String zipCode;
-    @Column(name="emailaddress")
+
+    @Column(name = "emailaddress")
     private String emailAddress;
 
     public Customer() {

@@ -8,8 +8,7 @@
 <h2>Results</h2>
 <p>There are [[${total}]] customers in [[${state}]]</p>
 <div th:each="result:${results}">
-    <p th:text="${result.lastName}"/>
-
+    <p th:text="${result.lastName}"></p>
 </div>
 </body>
 </html>
