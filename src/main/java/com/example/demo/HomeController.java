@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -19,12 +20,18 @@ public class HomeController {
         //Since the repository returns an iterable (a more generic class) we need
         //to cast it to an arrayList of type customer: (ArrayList<Customer>)
 
-        //problem1-the % symbol is an optional wildcard for 0 or more characters
+        //problem2-the % symbol is an optional wildcard for 0 or more characters
         String lastName = "Smith%";
         ArrayList<Customer> results =(ArrayList<Customer>)
+
         customerRepository.findAllByLastNameContainingIgnoreCase(lastName);
 
-        //problem2- The state could be selected from a user form and submitted back to the controller
+        //problem3
+        ArrayList<Customer> results3 =(ArrayList<Customer>)
+        //customerRepository.findByLastname("mattews");
+        customerRepository.findAllByLastnameOrderByState("Smith", "CA");
+
+        //problem1- The state could be selected from a user form and submitted back to the controller
         String state = "CA";
         long total = customerRepository.countByState(state);
 
@@ -33,5 +40,7 @@ public class HomeController {
         model.addAttribute("total",total);
         model.addAttribute("results", results);
         return "index";
+
+        //customerRepository.findByEmailAddressAndLastName()
     }
 }

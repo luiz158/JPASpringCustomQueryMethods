@@ -21,5 +21,14 @@
         <td th:text="${result.state}"></td>
     </tr>
 </table>
+<tr></tr>
+<table>
+    <tr th:each="result3:${results3}">
+        <td th:text="${result3.firstName}"></td>
+        <td th:text="${result3.lastName}"></td>
+        <td th:text="${result3.city}"></td>
+        <td th:text="${result3.state}"></td>
+    </tr>
+</table>
 </body>
 </html>

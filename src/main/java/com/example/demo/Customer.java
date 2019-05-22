@@ -16,20 +16,28 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="customerid")
     private long id;
+
     @Column(name="title")
-    private String  title;
+        private String  title;
+
     @Column(name="firstname")
     private String firstName;
+
     @Column(name="lastname")
     private String lastName;
+
     @Column(name="streetaddress")
     private String streetAddress;
+
     @Column(name="city")
     private String city;
+
     @Column(name="state")
     private String state;
+
     @Column(name="zipcode")
     private String zipCode;
+
     @Column(name="emailaddress")
     private String emailAddress;
 
