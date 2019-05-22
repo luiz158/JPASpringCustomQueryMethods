@@ -7,9 +7,19 @@
 <body>
 <h2>Results</h2>
 <p>There are [[${total}]] customers in [[${state}]]</p>
-<div th:each="result:${results}">
-    <p th:text="${result.lastName}"/>
-
-</div>
+<table>
+    <tr>
+        <th>Name </th>
+        <th>     </th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    <tr th:each="result:${results}">
+        <td th:text="${result.firstName}"></td>
+        <td th:text="${result.lastName}"></td>
+        <td th:text="${result.city}"></td>
+        <td th:text="${result.state}"></td>
+    </tr>
+</table>
 </body>
 </html>
