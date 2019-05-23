@@ -22,14 +22,12 @@ public class HomeController {
 
         //problem2-the % symbol is an optional wildcard for 0 or more characters
         String lastName = "Smith%";
-        ArrayList<Customer> results =(ArrayList<Customer>)
-
-        customerRepository.findAllByLastNameContainingIgnoreCase(lastName);
+        ArrayList<Customer> results =(ArrayList<Customer>)customerRepository.findAllByLastNameContainingIgnoreCase(lastName);
 
         //problem3
-        ArrayList<Customer> results3 =(ArrayList<Customer>)
-        //customerRepository.findByLastname("mattews");
-        customerRepository.findAllByLastnameOrderByState("Smith", "CA");
+        //ArrayList<Customer> results3 =(ArrayList<Customer>)customerRepository.findAllByLastNameOrderByState("Smith", "CA");
+//        customerRepository.findByLastname("mattews");
+
 
         //problem1- The state could be selected from a user form and submitted back to the controller
         String state = "CA";
